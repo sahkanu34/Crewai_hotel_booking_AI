@@ -1,0 +1,12 @@
+Collect travel requirements for the following customer:
+
+Destination: Kathmandu
+Check-in: 2026-05-10
+Check-out: 2026-05-13
+Guests: 2 Adults
+Budget: $120
+Hotel Type: Luxury
+Amenities:
+- Free WiFi
+- Breakfast
+- Swimming Pool

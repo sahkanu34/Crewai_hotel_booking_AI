@@ -1,0 +1,60 @@
+{
+  "name": "project_crewai",
+
+  "agents": [
+    "travel_consultant",
+    "hotel_search_specialist",
+    "booking_assistant"
+  ],
+
+  "tasks": [
+    {
+      "name": "collect_the_customers_travel_task",
+
+      "description": "Analyze the following customer request.\n\nCustomer Request:\n{customer_request}\n\nExtract the following information in a structured format:\n- Destination\n- Check-in date\n- Check-out date\n- Number of guests\n- Budget\n- Preferred hotel type\n- Desired amenities\n- Special requests\n\nIf any information is missing, clearly list the missing fields. Do NOT ask another coworker.",
+
+      "expected_output": "A structured travel summary containing destination, dates, guests, budget, hotel type, amenities and special requests.",
+
+      "agent": "travel_consultant"
+    },
+
+    {
+      "name": "search_and_compare_hotels_task",
+
+      "description": "Using the structured travel requirements from the previous task, recommend the 5 best hotels. Compare hotels by price, rating, amenities, location, and explain why each hotel is suitable.",
+
+      "expected_output": "A ranked list of 5 recommended hotels with:\n- Hotel Name\n- Rating\n- Estimated Price\n- Amenities\n- Location\n- Reason for Recommendation",
+
+      "agent": "hotel_search_specialist",
+
+      "context": [
+        "collect_the_customers_travel_task"
+      ]
+    },
+
+    {
+      "name": "review_the_selected_hotel_task",
+
+      "description": "Review the recommended hotels and prepare a professional booking summary for the best option. Include customer information, hotel details, estimated total cost, booking dates, guest details and reservation summary.",
+
+      "expected_output": "A complete booking confirmation including:\n- Customer Information\n- Hotel Information\n- Check-in Date\n- Check-out Date\n- Number of Guests\n- Estimated Cost\n- Reservation Summary",
+
+      "agent": "booking_assistant",
+
+      "context": [
+        "collect_the_customers_travel_task",
+        "search_and_compare_hotels_task"
+      ]
+    }
+  ],
+
+  "process": "sequential",
+
+  "verbose": true,
+
+  "memory": false,
+
+  "inputs": {
+    "customer_request": "I want to book a luxury hotel in Pokhara from 15 May 2026 to 18 May 2026 for 2 adults. My budget is $120 per night. I need free WiFi, breakfast, swimming pool, free parking and a lake view room."
+  }
+}
