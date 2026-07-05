@@ -325,9 +325,9 @@ This project is licensed under the MIT License.
 
 Machine Learning Engineer | AI Research Enthusiast
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/sahkanu34
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://linkedin.com/in/sahkanu34
 
 Email: surajsah132@gmail.com
 
