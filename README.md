@@ -18,6 +18,10 @@ The project is designed as a demonstration of:
 
 ---
 
+
+![Banner](images/automation.png)
+![Banner](images/traces.png)
+![Banner](images/dashboard.png)
 ## 🚀 Features
 
 - 🤖 Multi-agent collaboration
